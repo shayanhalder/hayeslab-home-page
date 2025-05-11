@@ -12,11 +12,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ name, imageUrl, description, 
     <div style={styles.card}>
       <img src={imageUrl} alt={name} style={styles.image} />
       <div style={styles.content}>
-        <h3 style={styles.title}>{name}</h3>
+        <h3 style={styles.title}> <a href={projectUrl} target="_blank" style={styles.link}> {name}</a></h3>
         <p style={styles.description}>{description}</p>
-        <a href={projectUrl} target="_blank" rel="noopener noreferrer" style={styles.link}>
-          Learn More
-        </a>
       </div>
     </div>
   );
@@ -32,7 +29,7 @@ const styles: { [key: string]: React.CSSProperties } = {
     backgroundColor: '#fff',
   },
   image: {
-    width: '180px', // Adjust as needed
+    width: '20%', // Adjust as needed
     height: '120px', // Adjust as needed
     objectFit: 'cover',
   },
@@ -45,6 +42,7 @@ const styles: { [key: string]: React.CSSProperties } = {
     marginBottom: '10px',
     fontSize: '1.25rem',
     color: '#333',
+    textDecoration: 'none',
   },
   description: {
     fontSize: '0.9rem',

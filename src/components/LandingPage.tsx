@@ -3,29 +3,33 @@ import React from 'react';
 import Section from './Section';
 import Header from './Header';
 import SearchBar from './SearchBar';
+import blantImage from '../assets/blant.jpeg';
+import sanaImage from '../assets/SANA.gif';
+import cellImage from '../assets/cell-tracking.gif';
+import sparcfireImage from '../assets/sparcfire.jpg';
 
 // Placeholder data - replace with your actual project details
 const biologyNetworksProjects = [
   {
     name: 'BLANT - Local Network Alignment',
-    imageUrl: 'https://via.placeholder.com/180x120.png?text=BLANT+Image', // Replace with actual image path
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    projectUrl: '#blant', // Replace with actual project URL
+    imageUrl: blantImage, // Replace with actual image path
+    description: 'Basic Local Alignment of Network Topology - fast, unbiased statistical graphlet sampling for any graphlet use.',
+    projectUrl: 'https://blant.ics.uci.edu/', // Replace with actual project URL
   },
   {
     name: 'SANA - Global Network Alignment',
-    imageUrl: 'https://via.placeholder.com/180x120.png?text=SANA+Image', // Replace with actual image path
-    description: 'When we begin to take into account the sheer breadth and undeniable presence of what might be perceived, at least in a general sense, as the full scope of that which is being presented here—regardless of how one chooses to define, interpret, or even simply sit with it—it quickly becomes apparent, in a somewhat nebulous and yet oddly compelling way, that what we are dealing with is not just something to be glanced over or absorbed in passing.',
-    projectUrl: '#sana', // Replace with actual project URL
+    imageUrl: sanaImage, // Replace with actual image path
+    description: 'The Simulating Annealing Network Aligner (SANA) is designed originally to align protein-protein interaction (PPI) networks, but now is able to align arbitrary undirected graphs, weighted on unweighted. It can produce near-optimal alignments of PPI-sized networks in about an hour, and it has been used to successfully align networks with up to 100,000 nodes and 100 million edges (though those alignments take about a week of CPU to complete).',
+    projectUrl: 'https://hayeslab.ics.uci.edu/sana', // Replace with actual project URL
   },
 ];
 
 const biologyCellTrackingProjects = [
   {
     name: 'Cell Universe',
-    imageUrl: 'https://via.placeholder.com/180x120.png?text=Cell+Universe', // Replace with actual image path
-    description: 'Considering the nature of the thing in question, which, while not strictly definable, exists in a state of being that suggests accumulation—though not necessarily in the traditional sense—it would not be entirely inaccurate, albeit somewhat premature, to gesture vaguely at the notion that, insofar as notions can be gestured at, this is... potentially, or at least performatively, a lot of information. Probably.',
-    projectUrl: '#celluniverse', // Replace with actual project URL
+    imageUrl: cellImage, // Replace with actual image path
+    description: 'Tracks the movement of cells from a video source. See the docs directory for our first published paper, also found at https://www.mdpi.com/1999-4893/15/2/51. The Python directory once worked well in 2D, with bacteria-shaped cells. The 3D Python code was experimental, but was abandoned after the umpteenth time it stopped working due to Python\'s inherent instability... at which point we moved to C++.',
+    projectUrl: 'https://github.com/waynebhayes/cellviewer?tab=readme-ov-file', // Replace with actual project URL
   },
 ];
 
@@ -34,16 +38,15 @@ const astronomyProjects = [
   // Example:
   {
     name: 'Galaxy Image Analysis Tool',
-    imageUrl: 'https://via.placeholder.com/180x120.png?text=Galaxy+Tool',
+    imageUrl: sparcfireImage,
     description: 'A tool for analyzing images of galaxies to identify key features and structures.',
-    projectUrl: '#galaxytool',
+    projectUrl: 'https://sparcfire.ics.uci.edu/',
   },
 ];
 
 const headerLinks = [
     { text: 'Tools', url: '#tools' },
     { text: 'Contact Us', url: '#contact' },
-    { text: 'Login/Register', url: '#login' },
 ];
 
 const LandingPage: React.FC = () => {
@@ -57,16 +60,13 @@ const LandingPage: React.FC = () => {
       <Header labName="Hayes Lab" navLinks={headerLinks} />
       <main style={styles.mainContent}>
         <SearchBar onSearch={handleSearch} placeholder="Search Hayes Lab Tools..." />
-
-        <Section title="Biology" projects={biologyCellTrackingProjects} /> {/* Main section title */}
-        {/* Subsection for Networks */}
+        <h1 style={{textAlign: 'center'}}> Biology </h1>
         <Section sectionSubtitle="Networks" projects={biologyNetworksProjects} title="" />
-        {/* Subsection for Cell Tracking */}
         <Section sectionSubtitle="Cell Tracking" projects={biologyCellTrackingProjects} title="" />
-
-        {/* Add more sections as needed */}
+        <h1 style={{textAlign: 'center'}}> Astronomy </h1>
+        <Section sectionSubtitle="Galaxy Image Analysis" projects={astronomyProjects} title="" />
       </main>
-      {/* You can add a Footer component here if needed */}
+
     </div>
   );
 };

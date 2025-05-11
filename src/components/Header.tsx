@@ -1,4 +1,5 @@
 import React from 'react';
+import Logo from '../assets/sana-logo-white.png';
 
 interface HeaderLink {
   text: string;
@@ -13,7 +14,10 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ labName, navLinks }) => {
   return (
     <header style={styles.header}>
-      <div style={styles.logoContainer}>
+      <div style={{display: 'flex', alignItems: 'center', height: '50px'}}>
+        <div style={styles.logoContainer}>
+            <img src={Logo} alt="Logo" style={styles.logo} />
+        </div>
         <h1 style={styles.labName}>{labName}</h1>
       </div>
       <nav style={styles.nav}>
@@ -33,16 +37,21 @@ const styles: { [key: string]: React.CSSProperties } = {
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '15px 30px',
-    backgroundColor: '#f8f9fa',
+    backgroundColor: '#507dcc',
     borderBottom: '1px solid #dee2e6',
+    color: 'white',
   },
   logoContainer: {
-    // If you have a logo image, you can add it here
+    scale: '0.5',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   labName: {
     fontSize: '1.8rem',
+    fontWeight: 'normal',
     margin: '0',
-    color: '#333',
+    color: 'white',
   },
   nav: {
     display: 'flex',
@@ -50,7 +59,7 @@ const styles: { [key: string]: React.CSSProperties } = {
   },
   navLink: {
     textDecoration: 'none',
-    color: '#007bff',
+    color: 'white',
     fontSize: '1rem',
     fontWeight: '500',
   },

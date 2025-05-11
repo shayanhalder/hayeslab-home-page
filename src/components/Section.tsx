@@ -36,9 +36,9 @@ const Section: React.FC<SectionProps> = ({ title, projects, sectionSubtitle }) =
 
 const styles: { [key: string]: React.CSSProperties } = {
   section: {
-    marginBottom: '40px',
-    paddingBottom: '20px',
-    borderBottom: '1px solid #ccc',
+    // marginBottom: '10px',
+    paddingBottom: '10px',
+    // borderBottom: '1px solid #ccc',
   },
   mainTitle: {
     fontSize: '2rem',
