@@ -45,8 +45,8 @@ const astronomyProjects = [
 ];
 
 const headerLinks = [
-    { text: 'Tools', url: '#tools' },
-    { text: 'Contact Us', url: '#contact' },
+    { text: 'Tools', url: 'tools' },
+    { text: 'Contact Us', url: 'contact' },
 ];
 
 const LandingPage: React.FC = () => {

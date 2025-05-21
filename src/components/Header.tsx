@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../assets/sana-logo-white.png';
-
+import { Link } from 'react-router-dom';
 interface HeaderLink {
   text: string;
   url: string;
@@ -14,12 +14,14 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ labName, navLinks }) => {
   return (
     <header style={styles.header}>
+      <Link to="/" style={{ textDecoration: 'none', }}>
       <div style={{display: 'flex', alignItems: 'center', height: '50px'}}>
         <div style={styles.logoContainer}>
             <img src={Logo} alt="Logo" style={styles.logo} />
         </div>
         <h1 style={styles.labName}>{labName}</h1>
       </div>
+      </Link>
       <nav style={styles.nav}>
         {navLinks.map((link, index) => (
           <a key={index} href={link.url} style={styles.navLink}>
@@ -30,6 +32,7 @@ const Header: React.FC<HeaderProps> = ({ labName, navLinks }) => {
     </header>
   );
 };
+
 
 const styles: { [key: string]: React.CSSProperties } = {
   header: {
