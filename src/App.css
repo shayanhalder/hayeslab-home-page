@@ -2,8 +2,9 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f0f2f5; /* Light grey background */
+  /* Use the sophisticated font stack you provided */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: #f0f2f5;
   color: #333;
 }
 
@@ -15,58 +16,97 @@ body {
 
 main {
   flex-grow: 1;
-  padding: 20px; /* Original padding */
-  padding-top: 80px; /* Adjust this value based on your header's actual height */
+  padding: 20px;
+  /* Original padding */
+  padding-top: 80px;
+  /* Adjust this value based on your header's actual height */
   max-width: 1200px;
   margin: 0 auto;
 }
 
 /* Header Styles (from previous response, ensure these are present) */
 .header {
-  background-color: #507DCD; /* Blue background */
-  padding: 15px 40px; /* Consistent padding on all sides */
+  background-color: #507DCD;
+  /* Blue background */
+  padding: 15px 20px;
+  /* Consistent padding on all sides */
   border-bottom: none;
   display: flex;
-  justify-content: space-between; /* Keeps Hayes Lab left, Nav right */
+  justify-content: space-between;
+  /* Keeps Hayes Lab left, Nav right */
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   position: fixed;
   width: 100%;
   z-index: 1000;
-  box-sizing: border-box; /* Ensures padding is included in width calculation */
+  box-sizing: border-box;
+  /* Ensures padding is included in width calculation */
+}
+
+.site-logo-container {
+  display: flex;
+  /* Make it a flex container */
+  align-items: center;
+  /* Vertically align items */
+  text-decoration: none;
+  /* Remove underline from the link */
+  color: white;
+  /* Ensure inherited text color is white */
 }
 
 .site-logo {
   font-size: 24px;
-  font-weight: bold;
-  color: white; /* White text for logo */
+  font-weight: 450;
+  color: white;
+  /* White text for logo */
   text-decoration: none;
+}
+
+.site-logo-text {
+  font-size: 24px;
+  /* Maintain font size */
+  font-weight: normal;
+  /* Keep non-bold */
+  color: white;
+  /* Ensure text color is white */
+  /* This span is now what receives the text styling previously on .site-logo */
+}
+
+.sana-logo {
+  height: 40px;
+  /* Adjust height as needed */
+  margin-right: 10px;
+  /* Space between logo and text */
+  /* If the logo has a transparent background, you might not need to worry about its color */
+  /* If it's a monochrome logo, ensure it appears white on the blue background */
 }
 
 .header-nav {
   display: flex;
-  gap: 25px; /* Spacing between nav links */
-  /* Ensure no conflicting margin or padding on the nav itself */
-  margin: 0; /* Reset margin */
-  padding: 0; /* Reset padding */
+  gap: 25px;
+  /* Spacing between nav links */
+  margin: 0;
+  /* Reset margin */
+  padding: 0;
+  /* Reset padding */
   /* Optional: If you want nav items to push to the very right edge *within the nav's space*
      and not be spread by the main header's justify-content, you could add: */
   /* justify-content: flex-end; */
 }
 
 .header-nav .nav-link {
-  margin: 0; /* Explicitly remove any default or inherited margins */
-  padding: 0; /* Explicitly remove any default or inherited paddings */
   color: white;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease-in-out;
-  white-space: nowrap; /* Prevent text from wrapping, keeping links on one line */
+  white-space: nowrap;
+  /* Prevent text from wrapping, keeping links on one line */
 }
 
 .header-nav .nav-link:hover {
-  color: #cce5ff; /* Lighter blue on hover for contrast */
+  color: #cce5ff;
+  /* Lighter blue on hover for contrast */
 }
 
 /* New: Landing Page Styles */
@@ -74,7 +114,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 80px); /* Adjust height based on header height */
+  min-height: calc(100vh - 80px);
+  /* Adjust height based on header height */
   text-align: center;
 }
 
@@ -96,7 +137,7 @@ main {
   padding: 15px 0;
   background-color: #f8f9fa;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .tool-link-top {
@@ -178,13 +219,16 @@ main {
 }
 
 .project-link-title {
-  text-decoration: none; /* Remove underline */
-  color: inherit; /* Inherit color from parent (h3) */
+  text-decoration: none;
+  /* Remove underline */
+  color: inherit;
+  /* Inherit color from parent (h3) */
   /* You can add hover effects here if desired */
 }
 
 .project-link-title:hover {
-  text-decoration: underline; /* Add underline on hover */
+  text-decoration: underline;
+  /* Add underline on hover */
 }
 
 
@@ -202,7 +246,8 @@ main {
     flex-direction: column;
     gap: 10px;
     align-items: center;
-    width: 100%; /* Ensure it takes full width for centering on small screens */
+    width: 100%;
+    /* Ensure it takes full width for centering on small screens */
   }
 
   .header-nav .nav-link {
@@ -225,10 +270,12 @@ main {
   }
 
   .landing-page h1 {
-    font-size: 3em; /* Smaller on mobile */
+    font-size: 3em;
+    /* Smaller on mobile */
   }
 
   main {
-    padding-top: 120px; /* Example, adjust as needed if header height changes significantly */
+    padding-top: 120px;
+    /* Example, adjust as needed if header height changes significantly */
   }
 }
