@@ -4,6 +4,7 @@ import Header from './components/Header';
 import LandingPage from './components/LandingPage'; // Import the existing LandingPage
 import ToolsPage from './components/ToolsPage'; // Keep the ToolsPage component
 import './App.css'; // Main App styles
+import NotFound from './components/NotFound';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             {/* Route for the tools page */}
             <Route path="/tools" element={<ToolsPage />} />
             {/* You can add more routes here if needed in the future */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
       </div>
