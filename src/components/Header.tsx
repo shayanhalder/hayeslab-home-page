@@ -21,7 +21,7 @@ const Header: React.FC = () => {
       </div>
       <nav className="header-nav">
         <Link to="/tools" className="nav-link">Tools</Link>
-
+        <Link to="/publications" className="nav-link">Publications</Link>
         <a href="/contact" className="nav-link">Contact Us</a>
         <a href="/login" className="nav-link">Login/Register</a>
       </nav>

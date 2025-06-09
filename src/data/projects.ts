@@ -24,7 +24,7 @@ const projects: Project[] = [
     name: 'BLANT - Local Network Alignment',
     imageUrl: '/assets/blant.jpeg',
     description: 'Basic Local Alignment of Network Topology - fast, unbiased statistical graphlet sampling for any graphlet use.',
-    projectUrl: '#blant', // Placeholder link
+    projectUrl: 'https://github.com/waynebhayes/BLANT', // Placeholder link
   },
   {
     id: 'cell-universe',
@@ -32,7 +32,7 @@ const projects: Project[] = [
     name: 'Cell Universe',
     imageUrl: '/assets/cell-tracking.gif',
     description: 'Tracks the movement of cells from a video source. See the docs directory for our first published paper, also found at https://www.mbp.com/1999-4803/16/251. The Python directory once worked well in 2D, with bacteria-shaped cells. The 3D Python code was experimental, but was abandoned after the complexity time it elapsed working due to Python\'s inherent scalability, at which point we moved to C++.',
-    projectUrl: '#cell-universe',
+    projectUrl: 'https://github.com/waynebhayes/CellUniverse',
   },
   {
     id: 'sahap',
@@ -40,7 +40,7 @@ const projects: Project[] = [
     name: 'SAHap',
     imageUrl: '/assets/placeholder-image.png',
     description: 'Description for SAHap goes here.',
-    projectUrl: '#sahap',
+    projectUrl: 'https://github.com/waynebhayes/SAHap',
   },
   {
     id: 'sparcfire',
@@ -48,7 +48,7 @@ const projects: Project[] = [
     name: 'SpArcFIRe',
     imageUrl: '/assets/sparcfire.jpg',
     description: 'Description for SpArcFIRe goes here.',
-    projectUrl: '#sparcfire',
+    projectUrl: 'https://github.com/waynebhayes/SpArcFiRe',
   },
   {
     id: 'pidentify',
@@ -56,7 +56,7 @@ const projects: Project[] = [
     name: 'Pidentify',
     imageUrl: '/assets/placeholder-image.png',
     description: 'Description for Pidentify goes here.',
-    projectUrl: '#pidentify',
+    projectUrl: 'https://github.com/waynebhayes/Pidentify',
   },
   {
     id: 'gowild',
@@ -64,7 +64,7 @@ const projects: Project[] = [
     name: 'GoWild',
     imageUrl: '/assets/placeholder-image.png',
     description: 'Description for GoWild goes here.',
-    projectUrl: '#gowild',
+    projectUrl: 'https://github.com/waynebhayes/GoWild',
   },
   {
     id: 'netgo',
@@ -72,7 +72,7 @@ const projects: Project[] = [
     name: 'NetGO',
     imageUrl: '/assets/placeholder-image.png',
     description: 'Description for NetGO goes here.',
-    projectUrl: '#netgo',
+    projectUrl: 'https://github.com/waynebhayes/NetGO',
   },
   {
     id: 'adaptable-sigmoids',
@@ -80,7 +80,7 @@ const projects: Project[] = [
     name: 'Adaptable-Sigmoids',
     imageUrl: '/assets/placeholder-image.png',
     description: 'Description for Adaptable-Sigmoids goes here.',
-    projectUrl: '#adaptable-sigmoids',
+    projectUrl: 'https://github.com/waynebhayes/Adaptable-Sigmoids',
   },
 ];
 
