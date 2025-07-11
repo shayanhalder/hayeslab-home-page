@@ -5,64 +5,152 @@ import projects from '../data/projects'; // Import your project data
 import '../App.css'; // This page relies on App.css for styling
 
 const ToolsPage: React.FC = () => {
+  const humanPoseProjects = projects.filter(p => p.category === 'human-pose-recognition');
   const networksProjects = projects.filter(p => p.category === 'networks');
   const cellTrackingProjects = projects.filter(p => p.category === 'cell-tracking');
-  const otherProjects = projects.filter(p => p.category === 'other');
+  const haplotypeAssemblyProjects = projects.filter(p => p.category === 'haplotype-assembly');
+  const galaxiesProjects = projects.filter(p => p.category === 'galaxies');
+  const classifiersPvaluesProjects = projects.filter(p => p.category === 'classifiers-pvalues');
+
 
   return (
     <div className="tools-page">
-      <nav className="tools-nav-top">
-        {projects.map(project => (
-          <a key={project.id} href={project.projectUrl} className="tool-link-top">
-            {project.name.split(' - ')[0]}
-          </a>
-        ))}
-      </nav>
+      <div className="tools-content-wrapper">
+        <nav className="tools-nav-sidebar">
 
-      <section className="category-section">
-        <h2 className="category-header networks-header">Networks</h2>
-        <div className="projects-grid">
+          <h2>Human Pose Recognition</h2>
+          {humanPoseProjects.map(project => (
+            <a key={project.id} href={project.projectUrl} className="tool-link-sidebar">
+              {project.name.split(' - ')[0]}
+            </a>
+          ))}
+          <h2>Networks</h2>
           {networksProjects.map(project => (
-            <ProjectCard
-              key={project.id}
-              name={project.name}
-              imageUrl={project.imageUrl}
-              description={project.description}
-              projectUrl={project.projectUrl}
-            />
+            <a key={project.id} href={project.projectUrl} className="tool-link-sidebar">
+              {project.name.split(' - ')[0]}
+            </a>
           ))}
-        </div>
-      </section>
-
-      <section className="category-section">
-        <h2 className="category-header cell-tracking-header">Cell Tracking</h2>
-        <div className="projects-grid">
+          <h2>Cell Tracking</h2>
           {cellTrackingProjects.map(project => (
-            <ProjectCard
-              key={project.id}
-              name={project.name}
-              imageUrl={project.imageUrl}
-              description={project.description}
-              projectUrl={project.projectUrl}
-            />
+            <a key={project.id} href={project.projectUrl} className="tool-link-sidebar">
+              {project.name.split(' - ')[0]}
+            </a>
           ))}
-        </div>
-      </section>
+          <h2>Haplotype Assembly</h2>
+          {haplotypeAssemblyProjects.map(project => (
+            <a key={project.id} href={project.projectUrl} className="tool-link-sidebar">
+              {project.name.split(' - ')[0]}
+            </a>
+          ))}
+          <h2>Galaxy Analysis</h2>
+          {galaxiesProjects.map(project => (
+            <a key={project.id} href={project.projectUrl} className="tool-link-sidebar">
+              {project.name.split(' - ')[0]}
+            </a>
+          ))}
+          <h2>Classifiers with P-values</h2>
+          {classifiersPvaluesProjects.map(project => (
+            <a key={project.id} href={project.projectUrl} className="tool-link-sidebar">
+              {project.name.split(' - ')[0]}
+            </a>
+          ))}
+          
+        </nav>
 
-      <section className="category-section">
-        <h2 className="category-header other-header">Other</h2>
-        <div className="projects-grid">
-          {otherProjects.map(project => (
-            <ProjectCard
-              key={project.id}
-              name={project.name}
-              imageUrl={project.imageUrl}
-              description={project.description}
-              projectUrl={project.projectUrl}
-            />
-          ))}
+        <div className="tools-main-content">
+
+          <section className="category-section">
+            <h2 className="category-header human-pose-recognition-header">Human Pose Recognition</h2>
+            <div className="projects-grid">
+              {humanPoseProjects.map(project => (
+                <ProjectCard
+                  key={project.id}
+                  name={project.name}
+                  imageUrl={project.imageUrl}
+                  description={project.description}
+                  projectUrl={project.projectUrl}
+                />
+              ))}
+            </div>
+          </section>
+    
+          <section className="category-section">
+            <h2 className="category-header networks-header">Networks</h2>
+            <div className="projects-grid">
+              {networksProjects.map(project => (
+                <ProjectCard
+                  key={project.id}
+                  name={project.name}
+                  imageUrl={project.imageUrl}
+                  description={project.description}
+                  projectUrl={project.projectUrl}
+                />
+              ))}
+            </div>
+          </section>
+
+          <section className="category-section">
+            <h2 className="category-header cell-tracking-header">Cell Tracking</h2>
+            <div className="projects-grid">
+              {cellTrackingProjects.map(project => (
+                <ProjectCard
+                  key={project.id}
+                  name={project.name}
+                  imageUrl={project.imageUrl}
+                  description={project.description}
+                  projectUrl={project.projectUrl}
+                />
+              ))}
+            </div>
+          </section>
+
+          <section className="category-section">
+            <h2 className="category-header haplotype-assembly-header">Haplotype Assembly</h2>
+            <div className="projects-grid">
+              {haplotypeAssemblyProjects.map(project => (
+                <ProjectCard
+                  key={project.id}
+                  name={project.name}
+                  imageUrl={project.imageUrl}
+                  description={project.description}
+                  projectUrl={project.projectUrl}
+                />
+              ))}
+            </div>
+          </section>
+
+          <section className="category-section">
+            <h2 className="category-header galaxies-header">Galaxy Analysis</h2>
+            <div className="projects-grid">
+              {galaxiesProjects.map(project => (
+                <ProjectCard
+                  key={project.id}
+                  name={project.name}
+                  imageUrl={project.imageUrl}
+                  description={project.description}
+                  projectUrl={project.projectUrl}
+                />
+              ))}
+            </div>
+          </section>
+
+          <section className="category-section">
+            <h2 className="category-header classifiers-pvalues-header">Classifiers with P-values</h2>
+            <div className="projects-grid">
+              {classifiersPvaluesProjects.map(project => (
+                <ProjectCard
+                  key={project.id}
+                  name={project.name}
+                  imageUrl={project.imageUrl}
+                  description={project.description}
+                  projectUrl={project.projectUrl}
+                />
+              ))}
+            </div>
+          </section>
+
         </div>
-      </section>
+      </div>
     </div>
   );
 };
