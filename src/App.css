@@ -30,11 +30,13 @@ main {
   width: 100%;
   background-color: #507DCD;
   color: #ffffff;
-  padding: 14.5px 14.5px;
+  padding: 16px 16px;
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box; /* Add this line */
+
 }
 
 .site-logo-container {
@@ -54,30 +56,30 @@ main {
 }
 
 .site-logo-text {
-  font-size: 18px;
-  letter-spacing: 0.1px;
+  font-size: 20px;
+  letter-spacing: 0px;
   font-weight: normal;
   color: white;
 }
 
 .sana-logo {
-  height: 36.5px;
-  margin-right: 7px; /* Space between logo and text */
+  height: 40px;
+  margin-right: 8px; /* Space between logo and text */
 }
 
 .header-nav {
   display: flex;
-  gap: 25px; /* Spacing between nav links */
+  gap: 32px; /* Spacing between nav links */
   margin: 0;
-  padding: 0 40px;
+  padding: 0px 0px 1px;
   
 }
 
 .header-nav .nav-link {
-  font-size: 14.5px;
+  font-size: 16px;
   color: white;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 475;
   transition: color 0.2s ease-in-out;
   white-space: nowrap;
   /* Prevent text from wrapping, keeping links on one line */
@@ -300,8 +302,8 @@ main {
 
 .tools-nav-sidebar h2 {
   color: #35465F;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
-  margin: 0 0 15px 0;
-  padding: 0 0px;
+  margin: 0 0 10px 0;
+  padding: 0px 0px 0px;
 }
