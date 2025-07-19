@@ -90,21 +90,6 @@ main {
   /* Lighter blue on hover for contrast */
 }
 
-/* New: Landing Page Styles */
-.landing-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: calc(100vh - 80px);
-  text-align: center;
-}
-
-.landing-page h1 {
-  font-size: 4em;
-  color: #333;
-  margin: 0;
-}
-
 
 /* Tools Page Specific Styles  */
 .tools-page {
@@ -235,11 +220,6 @@ main {
 
   .projects-grid {
     grid-template-columns: 1fr;
-  }
-
-  .landing-page h1 {
-    font-size: 3em;
-    /* Smaller on mobile */
   }
 
   main {

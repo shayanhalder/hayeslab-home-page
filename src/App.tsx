@@ -1,11 +1,12 @@
 //import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css'; // Main App styles
+
 import Header from './components/Header';
 import Footer from './components/Footer';
-import LandingPage from './components/LandingPage'; // Import the existing LandingPage
-import ToolsPage from './components/ToolsPage'; // Keep the ToolsPage component
-import './App.css'; // Main App styles
-import NotFound from './components/NotFound';
+import LandingPage from './pages/LandingPage';
+import ToolsPage from './pages/ToolsPage';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -14,11 +15,8 @@ function App() {
         <Header />
         <main className="flex-grow">
           <Routes>
-            {/* Route for the landing page */}
             <Route path="/" element={<LandingPage />} />
-            {/* Route for the tools page */}
             <Route path="/tools" element={<ToolsPage />} />
-            {/* You can add more routes here if needed in the future */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

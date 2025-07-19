@@ -1,6 +1,6 @@
 // src/components/ToolsPage.tsx
 import React from 'react';
-import ProjectCard from './ProjectCard'; // Import ProjectCard
+import ProjectCard from '../components/ProjectCard'; // Import ProjectCard
 import projects from '../data/projects'; // Import your project data
 import '../App.css'; // This page relies on App.css for styling
 

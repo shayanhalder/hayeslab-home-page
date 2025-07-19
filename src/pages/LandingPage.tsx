@@ -1,7 +1,7 @@
 // src/components/LandingPage.tsx
 
 import React from 'react';
-import '../App.css'; // For basic styling like centering
+import './LandingPage.css';
 
 const LandingPage: React.FC = () => {
   return (
