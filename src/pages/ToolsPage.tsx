@@ -8,9 +8,9 @@ const ToolsPage: React.FC = () => {
   const humanPoseProjects = projects.filter(p => p.category === 'human-pose-recognition');
   const networksProjects = projects.filter(p => p.category === 'networks');
   const cellTrackingProjects = projects.filter(p => p.category === 'cell-tracking');
-  const haplotypeAssemblyProjects = projects.filter(p => p.category === 'haplotype-assembly');
+  // const haplotypeAssemblyProjects = projects.filter(p => p.category === 'haplotype-assembly');
   const galaxiesProjects = projects.filter(p => p.category === 'galaxies');
-  const classifiersPvaluesProjects = projects.filter(p => p.category === 'classifiers-pvalues');
+  // const classifiersPvaluesProjects = projects.filter(p => p.category === 'classifiers-pvalues');
 
 
   return (
@@ -49,7 +49,7 @@ const ToolsPage: React.FC = () => {
               {project.name.split(' - ')[0]}
             </a>
           ))}
-          <h2>Haplotype Assembly</h2>
+          {/* <h2>Haplotype Assembly</h2>
           {haplotypeAssemblyProjects.map(project => (
             <a key={project.id} href={project.projectUrl} className="tool-link-sidebar">
               {project.name.split(' - ')[0]}
@@ -60,7 +60,7 @@ const ToolsPage: React.FC = () => {
             <a key={project.id} href={project.projectUrl} className="tool-link-sidebar">
               {project.name.split(' - ')[0]}
             </a>
-          ))}
+          ))} */}
           
         </nav>
 
@@ -127,7 +127,7 @@ const ToolsPage: React.FC = () => {
             </div>
           </section>
 
-          <section className="category-section">
+          {/* <section className="category-section">
             <h2 className="category-header haplotype-assembly-header">Haplotype Assembly</h2>
             <div className="projects-grid">
               {haplotypeAssemblyProjects.map(project => (
@@ -140,9 +140,9 @@ const ToolsPage: React.FC = () => {
                 />
               ))}
             </div>
-          </section>
+          </section> */}
 
-          <section className="category-section">
+          {/* <section className="category-section">
             <h2 className="category-header classifiers-pvalues-header">Classifiers with P-values</h2>
             <div className="projects-grid">
               {classifiersPvaluesProjects.map(project => (
@@ -155,7 +155,7 @@ const ToolsPage: React.FC = () => {
                 />
               ))}
             </div>
-          </section>
+          </section> */}
 
         </div>
       </div>

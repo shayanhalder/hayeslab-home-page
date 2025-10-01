@@ -20,6 +20,7 @@ const Header: React.FC = () => {
         </Link>
       </div>
       <nav className="header-nav">
+        <a href="/" className="nav-link">Home</a>
         <Link to="/tools" className="nav-link">Tools</Link>
         {/* <Link to="/publications" className="nav-link">Publications</Link> */}
         <a href="https://scholar.google.com/citations?user=3z4VbdIAAAAJ&hl=en" target="_blank">Publications</a>
