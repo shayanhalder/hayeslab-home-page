@@ -7,7 +7,7 @@ import '../App.css'; // This page relies on App.css for styling
 const ToolsPage: React.FC = () => {
   const networksProjects = projects.filter(p => p.category === 'networks');
   const cellTrackingProjects = projects.filter(p => p.category === 'cell-tracking');
-  const otherProjects = projects.filter(p => p.category === 'other');
+  // const otherProjects = projects.filter(p => p.category === 'other');
 
   return (
     <div className="tools-page">
@@ -34,11 +34,11 @@ const ToolsPage: React.FC = () => {
             </a>
           ))}
           <h2>Other</h2>
-          {otherProjects.map(project => (
+          {/* {otherProjects.map(project => (
             <a key={project.id} href={project.projectUrl} className="tool-link-sidebar">
               {project.name.split(' - ')[0]}
             </a>
-          ))}
+          ))} */}
         </nav>
 
         <div className="tools-main-content">
@@ -72,7 +72,7 @@ const ToolsPage: React.FC = () => {
             </div>
           </section>
 
-          <section className="category-section">
+          {/* <section className="category-section">
             <h2 className="category-header other-header">Other</h2>
             <div className="projects-grid">
               {otherProjects.map(project => (
@@ -85,7 +85,7 @@ const ToolsPage: React.FC = () => {
                 />
               ))}
             </div>
-          </section>
+          </section> */}
         </div>
       </div>
     </div>
