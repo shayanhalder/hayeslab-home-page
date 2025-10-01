@@ -17,14 +17,11 @@ const Footer = () => {
             </div>
             <div className="footer-social">
               <h4>Follow Us</h4>
-              <div className="social-links">
-                <a href="https://twitter.com/hayeslab" target="_blank" rel="noopener noreferrer">
-                  Twitter
-                </a>
-                <a href="https://github.com/hayeslab" target="_blank" rel="noopener noreferrer">
+              {/* <div className="social-links"> */}
+                <a href="https://github.com/waynebhayes" target="_blank">
                   GitHub
                 </a>
-              </div>
+              {/* </div> */}
             </div>
           </div>
         </div>
