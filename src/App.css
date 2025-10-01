@@ -101,7 +101,7 @@ main {
   text-decoration: none;
 }
 
-.header-nav .nav-link {
+.header-nav .nav-link, .header-nav a {
   color: white;
   text-decoration: none;
   font-weight: 475;
@@ -207,13 +207,18 @@ main {
 }
 
 .project-image-container {
-  flex-shrink: 0;
-  width: 200px;
+  flex: 0 0 25%;
+  max-width: 25%;
+  width: 25%;
+  padding: 0px 0px;
+  margin: 0px 0px;
+  height: min-content;
 }
 
 .project-image {
   width: 100%;
-  height: 150px;
+  height: auto;
+  display: block;
   object-fit: contain;
   border-radius: 8px;
   background-color: #ffffff;
@@ -221,8 +226,8 @@ main {
 }
 
 .project-content {
-  flex-grow: 1;
-  min-width: 0;
+  /* flex-grow: 1; 
+  min-width: 0; */
 }
 
 .project-title {

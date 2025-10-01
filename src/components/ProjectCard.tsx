@@ -13,9 +13,13 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({ name, imageUrl, description, projectUrl }) => {
   return (
     <div className="project-row">
-      <div className="project-image-container">
-        <img src={imageUrl} alt={name} className="project-image" />
-      </div>
+      {
+        imageUrl && (
+          <div className="project-image-container">
+            <img src={imageUrl} alt={name} className="project-image" />
+          </div>
+        )
+      }
       <div className="project-content">
         <h3 className="project-title">
           {projectUrl ? (
@@ -27,7 +31,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ name, imageUrl, description, 
           )}
         </h3>
         <p className="project-description">{description}</p>
+        
       </div>
+      
     </div>
   );
 };
