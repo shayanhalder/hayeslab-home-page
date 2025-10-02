@@ -2,12 +2,15 @@
 .landing-page {
   display: flex;
   flex-direction: column;
-  padding: 2rem 1rem; /* Add some padding around the content */
+  padding-top: 2rem; /* Add some padding around the content */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 5rem;
   height: 100%;
 }
 
 .landing-page h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
