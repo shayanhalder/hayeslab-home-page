@@ -27,7 +27,7 @@ const projects: Project[] = [
     name: 'Local Network Alignment (BLANT)',
     imageUrl: '/assets/blant.jpeg',
     description: 'Basic Local Alignment of Network Topology - fast, unbiased statistical graphlet sampling for any graphlet use.',
-    projectUrl: 'https://github.com/waynebhayes/BLANT', // Placeholder link
+    projectUrl: 'https://hayeslab.ics.uci.edu/blant', // Placeholder link
   },
   // {
   //   id: 'link prediction', //blant
@@ -86,7 +86,7 @@ const projects: Project[] = [
   //   category: 'human-pose-recognition',
   //   name: 'UnrealPose Dataset',
   //   imageUrl: '',
-  //   description: '',
+  //   description: '',l
   //   projectUrl: '', // Placeholder link
   // },
 
